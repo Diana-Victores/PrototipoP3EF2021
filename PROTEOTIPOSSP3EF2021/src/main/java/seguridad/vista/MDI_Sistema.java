@@ -1,3 +1,5 @@
+//CODIGO REUTILIZADO DE GRUPO 1 - COORDINADOR DIEGO  -- REUTILIZADOS POR DIANA VICTORES 
+
 package seguridad.vista;
 
 import com.formdev.flatlaf.FlatDarkLaf;

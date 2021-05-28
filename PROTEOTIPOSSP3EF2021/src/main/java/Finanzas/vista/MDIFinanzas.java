@@ -1,5 +1,6 @@
-package Finanzas.vista;
+//CODIGO REUTILIZADO DE GRUPO 1 - COORDINADOR DIEGO  -- REUTILIZADOS POR DIANA VICTORES 
 
+package Finanzas.vista;
 import com.formdev.flatlaf.FlatDarkLaf;
 import com.formdev.flatlaf.FlatLightLaf;
 import java.awt.Dimension;
