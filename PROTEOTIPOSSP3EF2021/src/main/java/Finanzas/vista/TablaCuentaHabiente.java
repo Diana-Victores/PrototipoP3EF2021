@@ -17,6 +17,8 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Sammy Guergachi <sguergachi at gmail.com>
  */
+
+// CODIGO REUTILIZADO DIANA VICTORES
 public class TablaCuentaHabiente extends javax.swing.JFrame {
 
    
