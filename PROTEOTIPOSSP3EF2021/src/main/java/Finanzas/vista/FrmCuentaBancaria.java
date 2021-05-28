@@ -34,6 +34,8 @@ import seguridad.vista.Mantenimiento_Perfil;
 /**
  *
  * @author Santiago Martinez Diaz 9959-19-13847
+ * 
+ * CODIGO REUTILIZADO POR DIANA VICTORES
  */
 public class FrmCuentaBancaria extends javax.swing.JInternalFrame {
     int codigoAplicacion = 1006;
