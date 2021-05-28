@@ -33,8 +33,6 @@ public class Login extends javax.swing.JFrame {
      */
     public static String usuarioSesion = "";
     public static String usuarioFianzas = "";
-    public static String usuarioHoteleria = "";
-    public static String usuarioComercial = "";
 
     public Login() {
         initComponents();
@@ -132,8 +130,8 @@ public class Login extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(cbxAcceso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cbxAcceso, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -170,8 +168,6 @@ public class Login extends javax.swing.JFrame {
 
     private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
         String cbx_AccesoSeguridad = cbxAcceso.getSelectedItem().toString();
-        String cbx_AccesoHoteleria = cbxAcceso.getSelectedItem().toString();
-        String cbx_AccesoFinanzas = cbxAcceso.getSelectedItem().toString();
         String cbx_AccesoComercial = cbxAcceso.getSelectedItem().toString();
 
         if (txtUsuario.getText().trim().isEmpty() || txtContraseña.getText().trim().isEmpty()) {
@@ -193,9 +189,8 @@ public class Login extends javax.swing.JFrame {
 
                 Insertar.setModulo("Login");
 
-
                 Insertar.setModulo("100");
-                
+
                 try {
                     BitacoraDAO.insert(Insertar);
                 } catch (UnknownHostException ex) {
@@ -205,10 +200,10 @@ public class Login extends javax.swing.JFrame {
                 System.out.println(usuarioAConsultar.toString());
                 // Recuperación de información a través de otro objeto
                 usuarioAConsultar = usuarioDAO.query(usuarioAConsultar);
-               
+
                 // se hace llamada a Hahs.sha1 para ingresar contraseña normalmente 
-                 String nuevoPass = Hash.sha1(txtContraseña.getText());
-                 //en vez de txtContraseña se hace llamada a nuevoPass 
+                String nuevoPass = Hash.sha1(txtContraseña.getText());
+                //en vez de txtContraseña se hace llamada a nuevoPass 
                 if (nuevoPass.equals(usuarioAConsultar.getPassword_usuario()) && txtUsuario.getText().equals(usuarioAConsultar.getUser_usuario())) {
                     //  if (txtUsuario.getText().equals(Integer.toString(usuarioAConsultar.getId_usuario()))) {
                     // if (txtContraseña.getText().equals(usuarioAConsultar.getPassword_usuario())){
@@ -230,8 +225,6 @@ public class Login extends javax.swing.JFrame {
                         }
                         break;
 
-                       
-
                         case "Area Finanzas":
                                  try {
                             usuarioFianzas = txtUsuario.getText();
@@ -242,8 +235,6 @@ public class Login extends javax.swing.JFrame {
                             System.out.println(e);
                         }
                         break;
-
-                       
 
                         default:
                     }
