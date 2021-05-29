@@ -267,7 +267,7 @@ public class GenerarPermisos {
         } catch (NumberFormatException ex) {
             System.out.println(ex);
 //        }
-}
+        }
     }
 
     public String[] getAccionesAplicacion(int codigoAplicacion, String usuario) {
